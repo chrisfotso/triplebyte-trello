@@ -1,13 +1,48 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  padding: 0;
+  box-sizing: border-box; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+.App {
+  display: grid;
+  margin-top: 25px;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "column1 column2 column3 column4"; }
+
+.column {
+  margin-right: 25px; }
+  .column:first-of-type {
+    margin-left: 25px; }
+  .column__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    text-align: center;
+    color: white; }
+  .column1 {
+    grid-area: column1; }
+    .column1 > .column__header {
+      background: #8e6e95; }
+  .column2 {
+    grid-area: column2; }
+    .column2 > .column__header {
+      background: #39a59c; }
+  .column3 {
+    grid-area: column3; }
+    .column3 > .column__header {
+      background: #344759; }
+  .column4 {
+    grid-area: column4; }
+    .column4 > .column__header {
+      background: #e8741e; }
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  border: 0.5px solid black;
+  margin: 12px 0px 12px 0px; }
+  > .card__arrow:hover {
+    cursor: pointer; }

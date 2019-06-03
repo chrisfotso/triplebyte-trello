@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: grid;
+  margin-top: 25px;
+  width: 100vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "column1 column2 column3 column4";
+}
+
+.column {
+  &:first-of-type {
+    margin-left: 25px;
+  }
+
+  margin-right: 25px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    text-align: center;
+    color: white;
+  }
+  &1 {
+    grid-area: column1;
+
+    > .column__header {
+      background: #8e6e95;
+    }
+  }
+
+  &2 {
+    grid-area: column2;
+
+    > .column__header {
+      background: #39a59c;
+    }
+  }
+
+  &3 {
+    grid-area: column3;
+
+    > .column__header {
+      background: #344759;
+    }
+  }
+
+  &4 {
+    grid-area: column4;
+
+    > .column__header {
+      background: #e8741e;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  border: 0.5px solid black;
+
+  margin: 12px 0px 12px 0px;
+
+  > &__arrow {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
